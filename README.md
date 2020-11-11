@@ -1,6 +1,6 @@
 # Corona Overview
 With this app you can view the current cases of the Coronavirus in Germany based on the dataset of the RKI (Robert Koch Institut).<br>
-This app is literally faster than the [experience](https://experience.arcgis.com/experience/478220a4c454480e823b17327b2bf1d4/page/page_1/), because it's a native Android application which is limited to a minimum of important data.
+This app is literally faster than the [experience](https://experience.arcgis.com/experience/478220a4c454480e823b17327b2bf1d4/page/page_1/) website, because it's a native Android application which is limited to a minimum of important data.
 
 ## Features
 View the current data of following places:
@@ -18,4 +18,4 @@ View the current data of following places:
     - Active + New active cases
     - Deaths + New deaths
     - Recovered + New recovered<br>
-\* The "New"-Values are the new cases from past day to today.
+* The "New"-Values are the new cases from past day to today.
