@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bgBox" format="color" />
+    <attr name="titleColor" format="color" />
+    <attr name="sTextColor" format="color" />
+    <attr name="deathTextColor" format="color" />
+    <attr name="recoveredTextColor" format="color" />
+    <attr name="statusBarSettings" format="color" />
+    <attr name="actionBarSettings" format="color" />
+</resources>

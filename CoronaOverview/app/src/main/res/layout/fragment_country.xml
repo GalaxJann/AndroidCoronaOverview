@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CountryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linear_cases"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/totalCasesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:gravity="center"
+                        android:letterSpacing="0.1"
+                        android:text="Gesamt"
+                        android:textColor="?attr/titleColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/totalCases"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:text="Lade..."
+                        android:textColor="#DD2C00"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/activeCasesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:gravity="center"
+                        android:letterSpacing="0.1"
+                        android:text="Aktiv"
+                        android:textColor="?attr/titleColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/activeCases"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:text="Lade..."
+                        android:textColor="#DD2C00"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:background="#1B1B1B" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/totalDeathsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:letterSpacing="0.1"
+                android:text="Todesfälle"
+                android:textColor="?attr/titleColor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/totalDeaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:letterSpacing="0.05"
+                android:text="Lade..."
+                android:textColor="?attr/deathTextColor"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:background="#1B1B1B" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/totalRecoveredTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:letterSpacing="0.1"
+                android:text="Geheilt"
+                android:textColor="?attr/titleColor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/totalRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:letterSpacing="0.05"
+                android:text="Lade..."
+                android:textColor="?attr/recoveredTextColor"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textTimestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="Stand: Lade..."
+            android:textColor="?attr/sTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
