@@ -17,7 +17,7 @@ View the current data of following places:
     - Total + New total cases
     - Active + New active cases
     - Deaths + New deaths
-    - Recovered + New recovered\\
+    - Recovered + New recovered\<br>
 Info: The "New"-Values are the new cases from past day to today.
 
 ## How does it work
