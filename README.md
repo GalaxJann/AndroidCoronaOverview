@@ -18,4 +18,4 @@ View the current data of following places:
     - Active + New active cases
     - Deaths + New deaths
     - Recovered + New recovered<br>
-* The "New"-Values are the new cases from past day to today.
+\\* The "New"-Values are the new cases from past day to today.
