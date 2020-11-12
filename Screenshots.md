@@ -1,7 +1,7 @@
 # Screenshots
 ## Normal/Light Theme
 #### RLP-Section
-<kbd><img src="assets/images/Screenshot_RLP_Light.png" alt="RLP" width="40%" style="margin: 8px"></kbd><br><br>
+<kbd width="42%"><img src="assets/images/Screenshot_RLP_Light.png" alt="RLP" width="40%" style="margin: 8px"></kbd><br><br>
 #### MYK-Section
 <img src="assets/images/Screenshot_MYK_Light.png" alt="MYK" width="40%" style="margin: 8px"><br><br>
 #### Deutschland-Section
