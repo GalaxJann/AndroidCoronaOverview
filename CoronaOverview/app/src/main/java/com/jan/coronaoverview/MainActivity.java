@@ -2,6 +2,7 @@ package com.jan.coronaoverview;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -9,30 +10,41 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private View mainView;
     private BottomNavigationView bottomNavigationView;
 
     private int colorActionBar;
     private int colorBottom;
+    private SharedPreferences spref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.mainView = this.findViewById(R.id.constraintLayout);
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavigationView);
+        spref = getSharedPreferences("values", 0);
+
+        //First Run Configuration
+        if(!spref.getBoolean("firstrun", false)) {
+            SharedPreferences.Editor editor = spref.edit();
+            editor.putInt("DarkMode", AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+            editor.putBoolean("firstrun", true);
+            editor.commit();
+        }
+
+        //Set Dark-Mode Setting
+        AppCompatDelegate.setDefaultNightMode(spref.getInt("DarkMode", AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM));
 
         //Start on first entry
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new RLPFragment()).commit();
@@ -160,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.itemSettings) {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

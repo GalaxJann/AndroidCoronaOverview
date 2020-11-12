@@ -61,7 +61,6 @@ public class RLPFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment RLPFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static RLPFragment newInstance(String param1, String param2) {
         RLPFragment fragment = new RLPFragment();
         Bundle args = new Bundle();
