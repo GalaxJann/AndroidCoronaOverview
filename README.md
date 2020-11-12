@@ -24,10 +24,13 @@ Info: The "New"-Values are the new cases from past day to today.
 ## How does it work
 The App gets the data from the dataset of the [experience](https://experience.arcgis.com/experience/478220a4c454480e823b17327b2bf1d4/page/page_1/) website with simple REST Requests, which sends JSON-Responses which I can parse very easily.
 
+## Screenshots
+[go here](Screenshots.md)
+
 ## Planned Feautures/Improvements
 \+ Scrolling for pages<br>
 \+ Selection for all federal states<br>
-\+ Selection for all counties
+\+ Selection for all counties<br>
 \# Fix some crashes
 
 ## Credits
