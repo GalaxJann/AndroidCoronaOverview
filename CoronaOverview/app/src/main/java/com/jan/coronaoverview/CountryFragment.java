@@ -1,5 +1,6 @@
 package com.jan.coronaoverview;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -109,8 +110,8 @@ public class CountryFragment extends Fragment {
                     String newdeaths = df.format(intNewdeaths);
                     String recovered = df.format(recoveredData[0]);
                     String newrecovered = df.format(recoveredData[1]);
-                    String activeCases = df.format(intCases - recoveredData[0]);
-                    String newActiveCases = df.format(intNewcases - recoveredData[1]);
+                    String activeCases = df.format(intCases - recoveredData[0] - intDeaths);
+                    String newActiveCases = df.format(intNewcases - recoveredData[1] - intNewdeaths);
                     String weekday = getWeekday(recoveredData[5]);
                     String timestamp = weekday + "; " + recoveredData[2] + "." + recoveredData[3] + "." + recoveredData[4];
                     SharedPreferences spref = getActivity().getSharedPreferences("values", 0);
@@ -201,7 +202,7 @@ public class CountryFragment extends Fragment {
                     data[0] = jsonObject.getInt("Genesen");
                     data[1] = jsonObject.getInt("DiffVortag");
                     String dateString = jsonObject.getString("Datenstand");
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy, HH:mm");
+                    @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy, HH:mm");
                     Date date = dateFormat.parse(dateString);
                     Calendar calendar = Calendar.getInstance();
                     calendar.setTime(date);

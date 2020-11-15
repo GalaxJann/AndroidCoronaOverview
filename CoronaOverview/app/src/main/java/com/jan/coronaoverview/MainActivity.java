@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
@@ -25,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     private int colorActionBar;
     private int colorBottom;
-    private SharedPreferences spref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavigationView);
-        spref = getSharedPreferences("values", 0);
+        SharedPreferences spref = getSharedPreferences("values", 0);
 
         //First Run Configuration
         if(!spref.getBoolean("firstrun", false)) {
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Navigation Listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment selected = null;

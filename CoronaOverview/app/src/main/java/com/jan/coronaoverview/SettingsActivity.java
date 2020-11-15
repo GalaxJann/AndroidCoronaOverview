@@ -1,6 +1,5 @@
 package com.jan.coronaoverview;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
@@ -9,7 +8,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
@@ -17,11 +15,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import java.util.Set;
-
 public class SettingsActivity extends AppCompatActivity {
 
-    private Spinner spinnerDarkMode;
     private SharedPreferences spref;
     private int spinnerCounter = 0;
 
@@ -31,7 +26,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         //Variable definition
-        spinnerDarkMode = findViewById(R.id.spinnerDarkMode);
+        Spinner spinnerDarkMode = findViewById(R.id.spinnerDarkMode);
         spref = getSharedPreferences("values", 0);
 
         String[] arraySpinner = new String[] {"Systemeinstellung", "Dunkel", "Hell"};
